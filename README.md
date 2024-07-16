@@ -1,6 +1,10 @@
 # Rock-Paper-Scissors Game
 
-## Environment Setup and Code Execution
+Welcome to the Rock-Paper-Scissors game project! This repository contains Python scripts that simulate a classic game of Rock-Paper-Scissors between two players(one simply randomized player, the other with a complex ML algorithm).
+
+## Context
+
+This project is designed to showcase the implementation of a simple game using Python
 
 ### Setup
 
@@ -11,20 +15,35 @@ To run the rock-paper-scissors game, follow these steps:
    ```bash
    make env
 
-### Explanation:
+2. **Activate the Environment:**
+   
+   ```bash
+   make build
 
-- **Title (`# Rock-Paper-Scissors Game`)**: Introduces the project and sets the context.
+3. **Clean up previous player.txt:**
+   
+   ```bash
+   make clean
 
-- **Environment Setup and Code Execution**: Provides clear instructions on how to prepare the environment and execute the game using Makefile commands.
 
-- **Setup**: Outlines the steps to create a virtual environment (`make env`) and provides an overview of the available Makefile targets (`clean`, `build`, `run`) for managing the environment and running the game.
+
+
+### Code Explanation:
 
 - **Summary of Python Files**: Describes the purpose and functionality of each Python script (`model.py`, `randomgame.py`, `evaluate.py`) involved in the project:
 
-  - **`model.py`**: Handles file operations and data manipulation using pandas for reading, comparing, and calculating scores based on moves stored in `player1.txt` and `player2.txt`.
+  - **`model.py`**: Using a [specify] algorithm to implement a strategy to defeat any player in rock paper scissors
+
   
-  - **`randomgame.py`**: Generates random moves ("rock", "paper", "scissors") for a specified number of rounds, writes them to new `player#.txt` files, and determines the next available player number dynamically.
+  - **`randomgame.py`**: Generates random moves ("rock", "paper", "scissors") for a specified number of rounds, writes them to new `player#.txt` files
+    •	make_choice(): Randomly selects a move (“rock”, “paper”, or “scissors”).
+	•	get_round(prompt, default_value): Prompts user to enter number of rounds or defaults to 100 if no input.
+	•	get_next_player_number(directory='.'): Determines next available player number based on existing player files.
+	•	main(): Executes process of generating random moves and writing them to a new player file.
+
   
   - **`evaluate.py`**: Reads moves from `player1.txt` and `player2.txt`, compares them based on predefined game rules to calculate scores for Player 1, Player 2, and ties.
-
-This structured format ensures clarity in understanding how to use and interact with the rock-paper-scissors game project, making it easier for users to get started and utilize the provided functionality. Adjust the markdown formatting as needed when adding it to your `README.md` file.
+    •	read_moves(filename): Reads moves from specified file into a list.
+	•	compare_moves(move1, move2): Compares moves and determines scores based on game rules.
+	•	calculate_scores(moves1, moves2): Iterates through moves of two players and calculates scores.
+	•	main(): Executes score calculation process and prints scores for Player 1, Player 2, and ties.

@@ -1,15 +1,25 @@
 import random
 import os
 import re
+import sys
 
 def make_choice():
     return random.choice(['rock', 'paper', 'scissors'])
 
 def get_round(prompt, default_value):
-    user_input = input(prompt)
-    if not user_input:
-        return default_value
-    return user_input
+    # Read the rounds parameter from command line arguments
+    if len(sys.argv) > 1:
+        try:
+            rounds = int(sys.argv[1])
+            if rounds <= 0:
+                raise ValueError("Number of rounds must be positive.")
+        except ValueError:
+            print("Invalid input for rounds. Defaulting to 100 rounds.")
+            rounds = 100
+    else:
+        rounds = 100  # Default rounds if not provided
+
+    return rounds
 
 def get_next_player_number(directory = '.'):
     # Regular expression pattern to match filenames like "player#.txt"

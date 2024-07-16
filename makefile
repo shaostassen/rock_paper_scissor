@@ -1,11 +1,17 @@
+# Define variables
+ENV_NAME := myenv
+DEFAULT_ROUNDS := 100
+
 clean:
 	rm -f *.txt
 env:
-	python -m venv myenv
+	python -m venv $(ENV_NAME)
 build:
-	source ./myenv/bin/activate
+	source ./$(ENV_NAME)/bin/activate
 deactivate:
 	deactivate
-run:
-	python random_game.py
+random:
+	python random_game.py rounds=$(or $(rounds),$(DEFAULT_ROUNDS))
+evaluate:
+    python evaluate.py player1=$(player1) player2=$(player2)
 
