@@ -24,9 +24,20 @@ To run the rock-paper-scissors game, follow these steps:
    
    ```bash
    make clean
+4. **Run random_game.py:**
+   
+   ```bash
+   make random (optional) rounds=#
+5. **Clean up previous player.txt:**
+   
+   ```bash
+   make evaluate (optional) player1=player#.txt player2=player#.txt
 
-
-
+### Push to Remote
+Make to run:
+    ```bash
+   make clean
+Before you add files through git
 
 ### Code Explanation:
 
