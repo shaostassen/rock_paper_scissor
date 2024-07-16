@@ -1,8 +1,11 @@
 clean:
 	rm -f *.txt
-build:
+env:
 	python -m venv myenv
+build:
 	source ./myenv/bin/activate
 deactivate:
 	deactivate
+run:
+	python random_game.py
 
