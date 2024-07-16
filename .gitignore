@@ -6,8 +6,3 @@ myenv/bin/activate.fish
 myenv/bin/Activate.ps1
 myenv/bin/python3.9
 myenv/pyvenv.cfg
-myenv/bin/activate
-myenv/bin/activate.csh
-myenv/bin/activate.fish
-myenv/bin/Activate.ps1
-myenv/pyvenv.cfg
