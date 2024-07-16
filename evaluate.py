@@ -1,4 +1,3 @@
-
 def read_moves(filename):
     with open(filename, 'r') as file:
         moves = file.read().splitlines()

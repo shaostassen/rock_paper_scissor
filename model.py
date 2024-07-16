@@ -1,3 +1,5 @@
+# This is a placeholder for the model code that will be used to make a robust rock paper scissors machine
+
 import pandas as pd
 
 # Read the contents of player1.txt into a list
