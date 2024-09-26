@@ -57,4 +57,4 @@ Before you add files through git
     •	read_moves(filename): Reads moves from specified file into a list.
 	•	compare_moves(move1, move2): Compares moves and determines scores based on game rules.
 	•	calculate_scores(moves1, moves2): Iterates through moves of two players and calculates scores.
-	•	main(): Executes score calculation process and prints scores for Player 1, Player 2, and ties.
+	•	main(): Executes score calculation process and prints scores for Player 1, Player 2, and if tie, that would result in zero for both them. 
