@@ -50,11 +50,4 @@ Before you add files through git
     •	make_choice(): Randomly selects a move (“rock”, “paper”, or “scissors”).
 	•	get_round(prompt, default_value): Prompts user to enter number of rounds or defaults to 100 if no input.
 	•	get_next_player_number(directory='.'): Determines next available player number based on existing player files.
-	•	main(): Executes process of generating random moves and writing them to a new player file.
-
-  
-  - **`evaluate.py`**: Reads moves from `player1.txt` and `player2.txt`, compares them based on predefined game rules to calculate scores for Player 1, Player 2, and ties.
-    •	read_moves(filename): Reads moves from specified file into a list.
-	•	compare_moves(move1, move2): Compares moves and determines scores based on game rules.
-	•	calculate_scores(moves1, moves2): Iterates through moves of two players and calculates scores.
-	•	main(): Executes score calculation process and prints scores for Player 1, Player 2, and ties.
+	•	main(): Executes process of generating random moves and writing them to a new player file
